@@ -1,6 +1,17 @@
 import Todo from "./Todo";
 
 function App(props) {
+  
+  const taskList = props.tasks.map(task => (
+        <Todo
+          id={task.id}
+          name={task.name}
+          completed={task.completed}
+          key={task.id}
+        />
+      )
+    );
+  
   return (
     <div className="todoapp stack-large">
       <h1>TodoMatic</h1>
@@ -45,9 +56,7 @@ function App(props) {
         className="todo-list stack-large stack-exception"
         aria-labelledby="list-heading"
       >
-        <Todo name="Eat" />
-        <Todo name="Sleep" />
-        <Todo name="Repeat" />
+        {taskList}
       </ul>
     </div>
   );
