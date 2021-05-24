@@ -1,5 +1,6 @@
 {
   "name": "todo-with-state",
+  "author": "Karanveer Singh Jhala",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
