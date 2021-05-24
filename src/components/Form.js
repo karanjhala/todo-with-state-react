@@ -1,10 +1,12 @@
+//imports
 import React, { useState } from "react";
 
 
-
 function Form(props) {
+    //state hooks
     const [name, setName] = useState('');
     
+    //functions
     function handleChange(e) {
         setName(e.target.value);
       }
@@ -15,6 +17,7 @@ function Form(props) {
         setName("");
       }
 
+    //render component
   return (
     <form onSubmit={handleSubmit}>
       <h2 className="label-wrapper">
